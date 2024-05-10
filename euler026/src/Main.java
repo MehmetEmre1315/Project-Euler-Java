@@ -30,7 +30,7 @@ public class Main {
                 remainder = numerator % denominator[i];
 
                 if (remainder == 0) {
-                    fraction = new int[100];
+                    fraction = new int[1000];
                     numerator = 1;
                     break;
                 } else {
@@ -39,8 +39,29 @@ public class Main {
                 }
             }
 
+            if (
+                    fraction[fraction.length - 1] == fraction[fraction.length - 100]
+                    && fraction[fraction.length - 1] == 0
+            ) continue;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }
+
     }
 }
