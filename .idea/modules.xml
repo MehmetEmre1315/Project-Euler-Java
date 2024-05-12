@@ -28,6 +28,7 @@
       <module fileurl="file://$PROJECT_DIR$/euler024/euler024.iml" filepath="$PROJECT_DIR$/euler024/euler024.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler025/euler025.iml" filepath="$PROJECT_DIR$/euler025/euler025.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler026/euler026.iml" filepath="$PROJECT_DIR$/euler026/euler026.iml" />
+      <module fileurl="file://$PROJECT_DIR$/euler027/euler027.iml" filepath="$PROJECT_DIR$/euler027/euler027.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/projectEuler.iml" filepath="$PROJECT_DIR$/.idea/projectEuler.iml" />
     </modules>
   </component>
