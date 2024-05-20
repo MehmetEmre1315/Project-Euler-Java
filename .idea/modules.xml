@@ -36,6 +36,7 @@
       <module fileurl="file://$PROJECT_DIR$/euler032/euler032.iml" filepath="$PROJECT_DIR$/euler032/euler032.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler033/euler033.iml" filepath="$PROJECT_DIR$/euler033/euler033.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler034/euler034.iml" filepath="$PROJECT_DIR$/euler034/euler034.iml" />
+      <module fileurl="file://$PROJECT_DIR$/euler035/euler035.iml" filepath="$PROJECT_DIR$/euler035/euler035.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/projectEuler.iml" filepath="$PROJECT_DIR$/.idea/projectEuler.iml" />
     </modules>
   </component>
