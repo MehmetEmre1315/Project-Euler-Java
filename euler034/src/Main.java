@@ -16,7 +16,7 @@ public class Main {
     }
     public static void main(String[] args) {
         int answer = 0;
-        // The maximum limit is set at 10000000. This limit is optional, may be higher
+        // The maximum limit is set at 10000000. This limit is arbitrary.
         for (int i = 3; i < 10000000; i++) {
             int[] array = intToArray(i);
             long sum = 0;
