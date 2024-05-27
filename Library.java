@@ -15,6 +15,7 @@ final class Library {
 
     // Max n value is 9
     // Return n digit pan digital numbers array
+    // n = 9 takes too much time, don't use for 9
     public static int[] nDigitPan (int n) {
         int[] array = new int[100000];
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
