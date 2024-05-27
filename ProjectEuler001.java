@@ -1,4 +1,4 @@
-public class Euler001 {
+public class ProjectEuler001 {
     public int run () {
         int ans1 = 0;
         for (int i = 1; i < 1000; i++) {
@@ -10,6 +10,6 @@ public class Euler001 {
         return ans1;
     }
     public static void main(String[] args) {
-        System.out.println(new Euler001().run());
+        System.out.println(new ProjectEuler001().run());
     }
 }
