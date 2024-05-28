@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 final class Library {
@@ -44,4 +45,18 @@ final class Library {
 
         return result;
     }
+
+    // Return array list of prime numbers factor of n
+    public static ArrayList<Long> primeNumberFinder(long n){
+        ArrayList<Long> primeNumbers = new ArrayList<>();
+        for (long i = 2; i <= n; i++) {
+            if (n % i == 0) {
+                primeNumbers.add(i);
+                n /= i;
+                i = 1;
+            }
+        }
+        return primeNumbers;
+    }
+
 }
