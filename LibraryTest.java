@@ -15,4 +15,12 @@ public class LibraryTest {
         assertEquals(12345, Library.nDigitPan(5)[0]);
     }
 
+    @Test
+    public void testPrimeNumberFinder () {
+        assertEquals(5, Library.primeNumberFinder(13195).get(0));
+        assertEquals(7, Library.primeNumberFinder(13195).get(1));
+        assertEquals(13, Library.primeNumberFinder(13195).get(2));
+        assertEquals(29, Library.primeNumberFinder(13195).get(3));
+    }
+
 }
