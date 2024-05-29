@@ -16,6 +16,11 @@ public class LibraryTest {
     }
 
     @Test
+    public void testIsPalindrome () {
+        assertTrue(Library.isPalindrome(9009));
+    }
+
+    @Test
     public void testPrimeNumberFinder () {
         assertEquals(5, Library.primeNumberFinder(13195).get(0));
         assertEquals(7, Library.primeNumberFinder(13195).get(1));
