@@ -46,6 +46,13 @@ final class Library {
         return result;
     }
 
+    // Check if n is palindrome
+    public static boolean isPalindrome (long n) {
+        String str = String.valueOf(n);
+        StringBuilder sb = new StringBuilder(str);
+        return str.contentEquals(sb.reverse());
+    }
+
     // Return array list of prime numbers factor of n
     public static ArrayList<Long> primeNumberFinder(long n){
         ArrayList<Long> primeNumbers = new ArrayList<>();
