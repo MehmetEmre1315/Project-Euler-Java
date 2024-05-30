@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
-    static void smallestMultiple (int dividerLimit ) {
-        long x = dividerLimit;
+public class ProjectEuler005 {
+    private static final int dividerLimit = 20;
+    public int run () {
+        long x = 1;
         long ans;
         List<Integer> tallyCounter = new ArrayList<>();
 
@@ -18,20 +19,19 @@ public class Main {
             }
 
             if (tallyCounter.size() == dividerLimit) {
-
                 System.out.println("Answer: " + x);
                 ans = x;
                 break;
             }
-            x += 10;
+            x++;
         }
 
         for (int i = 1; i <= dividerLimit; i++) {
             System.out.println(ans + "/" + i + "=" + ans / i);
         }
+        return (int) ans;
     }
-
     public static void main(String[] args) {
-        smallestMultiple(20);
+        System.out.println(new ProjectEuler005().run());
     }
 }

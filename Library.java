@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 final class Library {
 
@@ -54,9 +55,9 @@ final class Library {
     }
 
     // Return array list of prime numbers factor of n
-    public static ArrayList<Long> primeNumberFinder(long n){
-        ArrayList<Long> primeNumbers = new ArrayList<>();
-        for (long i = 2; i <= n; i++) {
+    public static ArrayList<Integer> primeNumberFinder(long n){
+        ArrayList<Integer> primeNumbers = new ArrayList<>();
+        for (int i = 2; i <= n; i++) {
             if (n % i == 0) {
                 primeNumbers.add(i);
                 n /= i;
@@ -64,6 +65,23 @@ final class Library {
             }
         }
         return primeNumbers;
+    }
+
+    // return lowest common multiple integer of two integers a and b
+    public static int leastCommonMultiple(int a, int b) {
+        List<Integer> arrayA = new ArrayList<>();
+        List<Integer> arrayB = new ArrayList<>();
+        int i = 1;
+        while (true) {
+            arrayA.add(a * i);
+            arrayB.add(b * i);
+            if (arrayA.contains(b * i)) {
+                return b * i;
+            } else if (arrayB.contains(a * i)) {
+                return a * i;
+            }
+            i++;
+        }
     }
 
 }
