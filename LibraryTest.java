@@ -28,4 +28,9 @@ public class LibraryTest {
         assertEquals(29, Library.primeNumberFinder(13195).get(3));
     }
 
+    @Test
+    public void testLeastCommonMultiple() {
+        assertEquals(12, Library.leastCommonMultiple(4, 6));
+    }
+
 }

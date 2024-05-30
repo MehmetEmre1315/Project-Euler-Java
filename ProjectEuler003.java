@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ProjectEuler003 {
     public String run(){
         long n = 600851475143L;
-        ArrayList<Long> primeNumbers = Library.primeNumberFinder(n);
+        ArrayList<Integer> primeNumbers = Library.primeNumberFinder(n);
         return String.valueOf(primeNumbers.get(primeNumbers.size()-1));
     }
     public static void main(String[] args) {

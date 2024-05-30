@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/euler005/euler005.iml" filepath="$PROJECT_DIR$/euler005/euler005.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler006/euler006.iml" filepath="$PROJECT_DIR$/euler006/euler006.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler007/euler007.iml" filepath="$PROJECT_DIR$/euler007/euler007.iml" />
       <module fileurl="file://$PROJECT_DIR$/euler008/euler008.iml" filepath="$PROJECT_DIR$/euler008/euler008.iml" />
