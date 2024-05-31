@@ -33,4 +33,10 @@ public class LibraryTest {
         assertEquals(12, Library.leastCommonMultiple(4, 6));
     }
 
+    @Test
+    public void testGetFactors() {
+        assertEquals(6, Library.getFactors(28).size());
+
+    }
+
 }
