@@ -1,16 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
-    static boolean isPrime (long n) {
-        if (n < 2) return false;
-        if (n == 2) return true;
-        for (long i = 2L; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
-        }
-        return true;
-    }
-    public static void main(String[] args) {
+public class ProjectEuler010 {
+    public String run() {
         long answer;
         List<Long> bigList = new ArrayList<>();
         List<Long> primeList = new ArrayList<>();
@@ -20,12 +12,15 @@ public class Main {
             bigList.add(i);
         }
         for (long i : bigList) {
-            if (isPrime(i)) {
+            if (Library.isPrime(i)) {
                 primeList.add(i);
             }
         }
         answer = primeList.stream().mapToLong(Long::longValue).sum();
-        System.out.println(answer);
-
+        System.out.println("Answer: " + answer);
+        return Long.toString(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler010().run();
     }
 }

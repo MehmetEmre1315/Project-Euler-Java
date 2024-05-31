@@ -84,4 +84,23 @@ final class Library {
         }
     }
 
+    // Return array list of factors of n
+    // 1 and n is included
+    // The logic of the method is this; if n is divided by i, i and n/i are added to the list
+    // if n == n/i then only one factor is added
+    public static ArrayList<Long> getFactors(long n) {
+        ArrayList<Long> factors = new ArrayList<>();
+        for(long i = 1L; i<= Math.sqrt(n); i++ ) {
+            if (n % i == 0) {
+                if (n / i == i) {
+                    factors.add(i);
+                } else {
+                    factors.add(i);
+                    factors.add(n / i);
+                }
+            }
+        }
+        return factors;
+    }
+
 }
