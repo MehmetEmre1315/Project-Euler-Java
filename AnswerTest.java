@@ -28,4 +28,8 @@ public class AnswerTest {
     public void ProjectEuler012 () {assertEquals("76576500", new ProjectEuler012().run());}
     @Test
     public void ProjectEuler013 () {assertEquals("5537376230", new ProjectEuler013().run());}
+    @Test
+    public void ProjectEuler014 () {assertEquals("837799", new ProjectEuler014().run());}
+    @Test
+    public void ProjectEuler015 () {assertEquals("137846528820", new ProjectEuler015().run());}
 }
