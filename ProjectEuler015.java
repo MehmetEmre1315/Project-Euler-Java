@@ -1,5 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler015 {
+    public String run() {
         int gridSize = 20;
         long[][] grid = new long[gridSize+1][gridSize+1];
         for (int i = 0; i <= gridSize; i++) {
@@ -14,5 +14,9 @@ public class Main {
         }
 
         System.out.println("Answer: " + grid[0][0]);
+        return String.valueOf(grid[0][0]);
+    }
+    public static void main(String[] args) {
+        new  ProjectEuler015().run();
     }
 }

@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ProjectEuler014 {
     static long evenNumberSequenceRule(long n) {
         return n/2;
     }
     static long oddNumberSequenceRule(long n) {
         return 3*n + 1;
     }
-    public static void main(String[] args) {
+
+    public String run() {
         long n;
         int listSize = 0;
         long answer = 0;
@@ -36,5 +37,9 @@ public class Main {
             }
         }
         System.out.printf("Answer: " + answer);
+        return String.valueOf(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler014().run();
     }
 }
