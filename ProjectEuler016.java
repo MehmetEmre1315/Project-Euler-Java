@@ -1,8 +1,8 @@
 import java.math.BigInteger;
 import java.util.Arrays;
 
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler016 {
+    public String run() {
         int exponent = 1000;
         BigInteger[] powerOf2 = new BigInteger[exponent];
         Arrays.fill(powerOf2, BigInteger.valueOf(2));
@@ -17,5 +17,9 @@ public class Main {
             answer += Integer.parseInt(String.valueOf(exponent1000.charAt(i)));
         }
         System.out.println("Answer: " + answer);
+        return Integer.toString(answer);
+    }
+    public static void main(String[] args) {
+        new  ProjectEuler016().run();
     }
 }
