@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Main {
+public class ProjectEuler017 {
     static String twoDigitNumberWriting (int number) {
         String numberToWriting;
 
@@ -77,7 +77,8 @@ public class Main {
         }
         return numberToWriting;
     }
-    public static void main(String[] args) {
+
+    public String run() {
         String numberToWriting = "";
         List<Integer> numbers = new ArrayList<>();
         List<String> numberToWritings = new ArrayList<>();
@@ -101,5 +102,10 @@ public class Main {
             answer += s.length();
         }
         System.out.println("Answer: " + answer); //21124
+        return Integer.toString(answer);
+    }
+
+    public static void main(String[] args) {
+        new ProjectEuler017().run();
     }
 }
