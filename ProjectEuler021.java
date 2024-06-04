@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ProjectEuler021 {
     static int sumOfDivisors(int n) {
         int sum = 0;
         for (int i = 1; i < n; i++) {
@@ -11,7 +11,7 @@ public class Main {
         }
         return sum;
     }
-    public static void main(String[] args) {
+    public String run() {
         List<Integer> amicableNumbers = new ArrayList<>();
         for (int i = 1; i < 10000; i++) {
             if (amicableNumbers.contains(i)) continue;
@@ -26,5 +26,10 @@ public class Main {
         System.out.print("Amicable numbers under 10000: ");
         System.out.println(amicableNumbers);
         System.out.println("Answer: " + amicableNumbers.stream().mapToInt(i -> i).sum());
+
+        return String.valueOf(amicableNumbers.stream().mapToInt(i -> i).sum());
+    }
+    public static void main(String[] args) {
+        new ProjectEuler021().run();
     }
 }

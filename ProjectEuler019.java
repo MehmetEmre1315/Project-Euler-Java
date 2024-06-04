@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler019 {
+    public String run() {
         int[] yearArray = new int[100];
         for (int i = 1901; i <= 2000; i++) {
             yearArray[i - 1901] = i;
@@ -66,5 +66,9 @@ public class Main {
         }
 
         System.out.println("Answer: " + answer);
+        return Integer.toString(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler019().run();
     }
 }

@@ -4,9 +4,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        File myObj = new File("euler22\\0022_names.txt");
+public class ProjectEuler022 {
+    private static final File myObj = new File("C:\\2024_Kodlama\\Coding\\Java\\IntelliJ\\Project-Euler-Java\\ProjectEuler022Names.txt");
+    public String run() {
+
         String data = null;
         try {
             Scanner myReader = new Scanner(myObj);
@@ -72,5 +73,9 @@ public class Main {
         }
 
         System.out.println("Answer: " + answer);
+        return Long.toString(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler022().run();
     }
 }
