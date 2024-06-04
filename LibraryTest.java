@@ -36,7 +36,10 @@ public class LibraryTest {
     @Test
     public void testGetFactors() {
         assertEquals(6, Library.getFactors(28).size());
-
+    }
+    @Test
+    public void testSumOfDividers() {
+        assertEquals(284, Library.sumOfDividers(220));
     }
 
 }

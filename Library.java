@@ -103,4 +103,15 @@ final class Library {
         return factors;
     }
 
+    // Sum of the proper divisors of long number, number itself is excluded
+    public static long sumOfDividers (long number) {
+        long sum = 0;
+        List<Long> factors = getFactors(number);
+        for (long factor : factors) {
+            if (factor == number) continue;
+            sum += factor;
+        }
+        return sum;
+    }
+
 }
