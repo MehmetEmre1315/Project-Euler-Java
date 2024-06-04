@@ -1,5 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler020 {
+    public String run() {
         int factorialN = 100;
         int [] bigNumberInArray = new int[250];
         bigNumberInArray[0] = 1;
@@ -30,5 +30,9 @@ public class Main {
         }
 
         System.out.println("\nAnswer is " + answer);
+        return String.valueOf(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler020().run();
     }
 }
