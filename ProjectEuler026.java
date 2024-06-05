@@ -1,5 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler026 {
+    public String run() {
         int [] fraction;
         int numerator;
         int remainder;
@@ -47,21 +47,21 @@ public class Main {
             // To eliminate recurring 0's at the end of the fraction
             if (
                     fraction[fraction.length - 1] == 0 &&
-                    fraction[fraction.length - 2] == 0 &&
-                    fraction[fraction.length - 3] == 0 &&
-                    fraction[fraction.length - 4] == 0 &&
-                    fraction[fraction.length - 5] == 0
+                            fraction[fraction.length - 2] == 0 &&
+                            fraction[fraction.length - 3] == 0 &&
+                            fraction[fraction.length - 4] == 0 &&
+                            fraction[fraction.length - 5] == 0
 
             ) continue;
 
             // Loop through the fraction to find recurring cycle
             for (int k = fraction.length - 2; k > 0; k--) {
                 if (
-                        //fraction[fraction.length - 1] == fraction[k] &&
+                    //fraction[fraction.length - 1] == fraction[k] &&
                         fraction[fraction.length - 2] == fraction[k - 1] &&
-                        fraction[fraction.length - 3] == fraction[k - 2] &&
-                        fraction[fraction.length - 4] == fraction[k - 3] &&
-                        fraction[fraction.length - 5] == fraction[k - 4]
+                                fraction[fraction.length - 3] == fraction[k - 2] &&
+                                fraction[fraction.length - 4] == fraction[k - 3] &&
+                                fraction[fraction.length - 5] == fraction[k - 4]
                 ) {
                     recurringCycle ++;
                     // To see every single recurring cycle
@@ -84,5 +84,9 @@ public class Main {
         }
 
         System.out.println("\nAnswer is number " + answer + " with recurring cycle of " + maxRecurringCycle);
+        return Integer.toString(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler026().run();
     }
 }
