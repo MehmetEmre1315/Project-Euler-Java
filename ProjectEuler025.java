@@ -1,5 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler025 {
+    public String run() {
         int [] fibonacciN0 =  new int[1000];
         int [] fibonacciN1 =  new int[1000];
         int [] fibonacciN2 =  new int[1000];
@@ -33,5 +33,9 @@ public class Main {
         for (int i = digitCount - 1; i >= 0; i--) {
             System.out.print(fibonacciN1[i]);
         }
+        return String.valueOf(fibonacciSequence);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler025().run();
     }
 }

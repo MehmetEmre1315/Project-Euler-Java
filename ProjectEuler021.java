@@ -2,21 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectEuler021 {
-    static int sumOfDivisors(int n) {
-        int sum = 0;
-        for (int i = 1; i < n; i++) {
-            if (n % i == 0) {
-                sum += i;
-            }
-        }
-        return sum;
-    }
     public String run() {
         List<Integer> amicableNumbers = new ArrayList<>();
         for (int i = 1; i < 10000; i++) {
             if (amicableNumbers.contains(i)) continue;
-            int sum1 = sumOfDivisors(i);
-            int sum2 = sumOfDivisors(sum1);
+            int sum1 = (int) Library.sumOfDividers(i);
+            int sum2 = (int) Library.sumOfDividers(sum1);
             if (i == sum2 && i != sum1) {
                 amicableNumbers.add(i);
                 amicableNumbers.add(sum1);

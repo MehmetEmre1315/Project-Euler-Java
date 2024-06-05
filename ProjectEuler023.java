@@ -1,26 +1,15 @@
 import java.util.*;
 
-public class Main {
-    static int sumOfDividers (int number) {
-        int sum = 0;
-        for (int i = 1; i < number; i++) {
-            if (number % i == 0) {
-                sum += i;
-            }
-        }
-        return sum;
-    }
-
+public class ProjectEuler023 {
     static int abundantNumber (int number) {
-        if (sumOfDividers(number) > number) {
+        if ((int) Library.sumOfDividers(number) > number) {
             return number;
         }
         else {
             return 0;
         }
     }
-
-    public static void main(String[] args) {
+    public String run() {
         long beginTime = System.nanoTime();
         List<Integer> abundantNumbers = new ArrayList<>();
         for (int i = 1; i < 28124; i++) {
@@ -51,5 +40,10 @@ public class Main {
         System.out.println("Execution Time: " + ((double) elapsedTime) / 1000000000 + " seconds");
 
         System.out.println("Answer: " + answer);
+        return Long.toString(answer);
+    }
+
+    public static void main(String[] args) {
+        new ProjectEuler023().run();
     }
 }
