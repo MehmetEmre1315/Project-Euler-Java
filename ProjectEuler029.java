@@ -2,8 +2,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler029 {
+    public String run() {
         int k = 0;
         String [] array = new String[9801];
         for (int i = 2; i <= 100; i++) {
@@ -19,5 +19,9 @@ public class Main {
         //String [] uniqueArray = stringHashSet.toArray(new String[0]);
 
         System.out.println("Answer: "  + stringHashSet.size());
+        return String.valueOf(stringHashSet.size());
+    }
+    public static void main(String[] args) {
+        new ProjectEuler029().run();
     }
 }

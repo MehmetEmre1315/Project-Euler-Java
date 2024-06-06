@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler032 {
+    public String run() {
         List<Integer> oneToNine = new ArrayList<>();
         List<Integer> products = new ArrayList<>();
         List<Integer> multiplicand = new ArrayList<>();
@@ -43,5 +43,10 @@ public class Main {
         System.out.println("Multiplier: \n" + multiplier);
         System.out.println("Products: \n" + products);
         System.out.println("Answer: " + answer);
+
+        return String.valueOf(answer);
+    }
+    public static void main(String[] args){
+        new ProjectEuler032().run();
     }
 }

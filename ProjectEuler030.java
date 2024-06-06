@@ -1,4 +1,4 @@
-public class Main {
+public class ProjectEuler030 {
     static int [] numberToArray (int number) {
 
         String numberString = String.valueOf(number);
@@ -8,8 +8,7 @@ public class Main {
         }
         return numberArray;
     }
-
-    public static void main(String[] args) {
+    public String run() {
         int i = 2;
         long n;
         long sum = 0;
@@ -31,5 +30,10 @@ public class Main {
             }
         }
         System.out.println("Answer: " + answer);
+        return String.valueOf(answer);
+    }
+
+    public static void main(String[] args) {
+        new ProjectEuler030().run();
     }
 }

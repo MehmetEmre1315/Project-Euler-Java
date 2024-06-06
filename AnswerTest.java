@@ -54,4 +54,20 @@ public class AnswerTest {
     public void ProjectEuler025 () {assertEquals("4782", new ProjectEuler025().run());}
     @Test
     public void ProjectEuler026 () {assertEquals("983", new ProjectEuler026().run());}
+    @Test
+    public void ProjectEuler027 () {assertEquals("-59231", new ProjectEuler027().run());}
+    @Test
+    public void ProjectEuler028 () {assertEquals("669171001", new ProjectEuler028().run());}
+    @Test
+    public void ProjectEuler029 () {assertEquals("9183", new ProjectEuler029().run());}
+    @Test
+    public void ProjectEuler030 () {assertEquals("443839", new ProjectEuler030().run());}
+    @Test
+    public void ProjectEuler031 () {assertEquals("73682", new ProjectEuler031().run());}
+    @Test
+    public void ProjectEuler032 () {assertEquals("45228", new ProjectEuler032().run());}
+    @Test
+    public void ProjectEuler033 () {assertEquals("100", new ProjectEuler033().run());}
+    @Test
+    public void ProjectEuler034 () {assertEquals("40730", new ProjectEuler034().run());}
 }
