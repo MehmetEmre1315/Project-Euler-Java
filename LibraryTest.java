@@ -9,17 +9,14 @@ public class LibraryTest {
         assertTrue(Library.isPrime(11));
         assertTrue(Library.isPrime(13));
     }
-
     @Test
     public void testNDigitPan () {
         assertEquals(12345, Library.nDigitPan(5)[0]);
     }
-
     @Test
     public void testIsPalindrome () {
         assertTrue(Library.isPalindrome(9009));
     }
-
     @Test
     public void testPrimeNumberFinder () {
         assertEquals(5, Library.primeNumberFinder(13195).get(0));
@@ -27,12 +24,10 @@ public class LibraryTest {
         assertEquals(13, Library.primeNumberFinder(13195).get(2));
         assertEquals(29, Library.primeNumberFinder(13195).get(3));
     }
-
     @Test
     public void testLeastCommonMultiple() {
         assertEquals(12, Library.leastCommonMultiple(4, 6));
     }
-
     @Test
     public void testGetFactors() {
         assertEquals(6, Library.getFactors(28).size());
@@ -40,6 +35,25 @@ public class LibraryTest {
     @Test
     public void testSumOfDividers() {
         assertEquals(284, Library.sumOfDividers(220));
+    }
+    @Test
+    public void testSumOfArray() {
+        int [][] twoDimensionalArray = {{1,2,3}, {10,20,30}};
+        assertEquals(66, Library.sumOfArray(twoDimensionalArray));
+    }
+    @Test
+    public void testFindMiddleInArray() {
+        int [][] twoDimensionalArray = {{0,0,0}, {0,10,0}};
+        assertEquals(1, Library.findMiddleInArray(twoDimensionalArray)[0]);
+        assertEquals(1, Library.findMiddleInArray(twoDimensionalArray)[1]);
+    }
+    @Test
+    public void testFactorial() {
+        assertEquals(120, Library.factorial(5));
+    }
+    @Test
+    public void testIntToArray() {
+        assertEquals(8, Library.intToArray(852)[0]);
     }
 
 }

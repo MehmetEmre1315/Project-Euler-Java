@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler031 {
+    public String run() {
         HashMap<String, Integer> currency = new HashMap<>();
         currency.put("1p",  1);
         currency.put("2p", 2);
@@ -93,5 +93,9 @@ public class Main {
         }
 
         System.out.println("Answer: " + answer);
+        return Integer.toString(answer);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler031().run();
     }
 }

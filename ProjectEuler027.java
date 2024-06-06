@@ -1,17 +1,9 @@
-public class Main {
+public class ProjectEuler027 {
     static int quadraticFormula (int n, int a, int b) {
         return (n * n) + (a * n) + b;
     }
 
-    static boolean isPrime (long n) {
-        if (n < 2) return false;
-        if (n == 2) return true;
-        for (long i = 2L; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
-        }
-        return true;
-    }
-    public static void main(String[] args) {
+    public String run() {
         int [] arrayA = new int[1999];
         int [] arrayB = new int[2001];
         int [] arrayN = new int[101];
@@ -27,8 +19,8 @@ public class Main {
         for (int b : arrayB) {
             for (int a : arrayA) {
                 for (int n : arrayN) {
-                    if (n == 0 && !isPrime(quadraticFormula(n, a, b))) break;
-                    if (isPrime(quadraticFormula(n, a, b))) {
+                    if (n == 0 && !Library.isPrime(quadraticFormula(n, a, b))) break;
+                    if (Library.isPrime(quadraticFormula(n, a, b))) {
                         if (n > answer[0]) {
                             answer[0] = n;
                             answer[1] = a;
@@ -43,8 +35,13 @@ public class Main {
 
         System.out.println(
                 "n^2 + " + answer[1] + "n + " + answer[2] +
-                " produces the maximum number of primes for consecutive values of n, starting at n = 0." +
-                " Maximum number of n = " + answer[0] + "." + "\n" +
-                "Product of a and b = " + (answer[1] * answer[2]));
+                        " produces the maximum number of primes for consecutive values of n, starting at n = 0." +
+                        " Maximum number of n = " + answer[0] + "." + "\n" +
+                        "Product of a and b = " + (answer[1] * answer[2]));
+        return String.valueOf((answer[1] * answer[2]));
+    }
+
+    public static void main(String[] args) {
+        new ProjectEuler027().run();
     }
 }

@@ -114,4 +114,33 @@ final class Library {
         return sum;
     }
 
+
+    // Sum of integers in a two-dimensional array
+    public static long sumOfArray (int [][] array) {
+        return Arrays.stream(array).flatMapToInt(Arrays::stream).sum();
+    }
+
+    // Return middle position of a two-dimensional array (like a matrix)
+    public static int [] findMiddleInArray (int [][] array) {
+        return new int[]{array.length / 2, array[0].length / 2};
+    }
+
+    // Return factorial of a number
+    public static int factorial(int number) {
+        int result = 1;
+        for (int i = 1; i <= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    // Return digit array of a number
+    public static int[] intToArray (int number) {
+        String str = String.valueOf(number);
+        int[] array = new int[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            array[i] = Integer.parseInt(String.valueOf(str.charAt(i)));
+        }
+        return array;
+    }
 }

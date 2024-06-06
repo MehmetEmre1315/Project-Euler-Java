@@ -1,5 +1,6 @@
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler033 {
+    public String run() {
+        // numbers ending in 0 are excluded
         int [] array = new int[81];
         int j = 0;
         for (int i = 11; i < 100; i++) {
@@ -26,7 +27,7 @@ public class Main {
 
                     if (
                             n0 == n1 && a[0].equals(b[0]) || n0 == n2 && a[0].equals(b[1]) ||
-                            n0 == n3 && a[1].equals(b[0])|| n0 == n4 && a[1].equals(b[1])
+                                    n0 == n3 && a[1].equals(b[0])|| n0 == n4 && a[1].equals(b[1])
                     ) {
                         l = l * array[i];
                         m *= array[k];
@@ -39,5 +40,10 @@ public class Main {
         System.out.println("The product of these four fractions"+ "\n" +"Numerator " + l + "\nDenominator " + m +
                 "\n" + "If the product of these four fractions is given in its lowest common terms, " +
                 "value of the denominator is :" + m / l);
+
+        return Integer.toString(m / l);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler033().run();
     }
 }
