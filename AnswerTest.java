@@ -70,4 +70,18 @@ public class AnswerTest {
     public void ProjectEuler033 () {assertEquals("100", new ProjectEuler033().run());}
     @Test
     public void ProjectEuler034 () {assertEquals("40730", new ProjectEuler034().run());}
+    @Test
+    public void ProjectEuler035 () {assertEquals("55", new ProjectEuler035().run());}
+    @Test
+    public void ProjectEuler036 () {assertEquals("872187", new ProjectEuler036().run());}
+    @Test
+    public void ProjectEuler037 () {assertEquals("748317", new ProjectEuler037().run());}
+    @Test
+    public void ProjectEuler038 () {assertEquals("932718654", new ProjectEuler038().run());}
+    @Test
+    public void ProjectEuler039 () {assertEquals("840", new ProjectEuler039().run());}
+    @Test
+    public void ProjectEuler040 () {assertEquals("210", new ProjectEuler040().run());}
+    @Test
+    public void ProjectEuler041 () {assertEquals("7652413", new ProjectEuler041().run());}
 }

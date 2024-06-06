@@ -1,4 +1,8 @@
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -16,6 +20,11 @@ public class LibraryTest {
     @Test
     public void testIsPalindrome () {
         assertTrue(Library.isPalindrome(9009));
+    }
+    @Test
+    public void testIsPalindrome1 () {
+        int [] array = {9,0,0,9};
+        assertTrue(Library.isPalindromeArray(array));
     }
     @Test
     public void testPrimeNumberFinder () {
@@ -54,6 +63,35 @@ public class LibraryTest {
     @Test
     public void testIntToArray() {
         assertEquals(8, Library.intToArray(852)[0]);
+    }
+    @Test
+    public void testRotationsOfDigits() {
+        assertEquals(197,Library.rotationsOfDigits(197)[0]);
+        assertEquals(971, Library.rotationsOfDigits(197)[1]);
+        assertEquals(719, Library.rotationsOfDigits(197)[2]);
+    }
+    @Test
+    public void testIntegerToBinaryArray() {
+        assertEquals(1, Library.integerToBinaryArray(5)[0]);
+        assertEquals(0, Library.integerToBinaryArray(5)[1]);
+        assertEquals(1, Library.integerToBinaryArray(5)[2]);
+    }
+    @Test
+    public void testRemoveDigitRightAndLeft() {
+        int [] array = Library.removeDigitRightAndLeft(3797);
+        List<Integer> list = new ArrayList<>();
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(797);
+        list1.add(97);
+        list1.add(7);
+        list1.add(379);
+        list1.add(37);
+        list1.add(3);
+
+        for (int i : array) {
+            list.add(i);
+        }
+        assertTrue(list.containsAll(list1));
     }
 
 }

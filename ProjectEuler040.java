@@ -1,5 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler040 {
+    public String run() {
         int [] array = new int[1000100];
 
         int i = 0;
@@ -19,5 +19,10 @@ public class Main {
 
         int product = array[0] * array[9] * array[99] * array[999] * array[9999] * array[99999] * array[999999];
         System.out.println("Product is: " + product);
+
+        return String.valueOf(product);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler040().run();
     }
 }
