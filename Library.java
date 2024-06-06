@@ -14,7 +14,6 @@ final class Library {
         return true;
     }
 
-
     // Max n value is 9
     // Return n digit pan digital numbers array
     // n = 9 takes too much time, don't use for 9
@@ -52,6 +51,16 @@ final class Library {
         String str = String.valueOf(n);
         StringBuilder sb = new StringBuilder(str);
         return str.contentEquals(sb.reverse());
+    }
+
+    // Check if int array is palindrome, without StringBuilder
+    public static boolean isPalindromeArray(int [] array) {
+        for (int i = 0; i < array.length / 2; i++) {
+            if (array[i] != array[(array.length - 1) - i]) {
+                return false;
+            }
+        }
+        return true;
     }
 
     // Return array list of prime numbers factor of n
@@ -140,6 +149,48 @@ final class Library {
         int[] array = new int[str.length()];
         for (int i = 0; i < str.length(); i++) {
             array[i] = Integer.parseInt(String.valueOf(str.charAt(i)));
+        }
+        return array;
+    }
+
+    // Method to find all rotations of a number
+    public static int[] rotationsOfDigits (int number) {
+        String numberString = String.valueOf(number);
+        int[] rotations = new int[numberString.length()];
+
+        for (int i = 0; i < numberString.length(); i++) {
+            rotations[i] = Integer.parseInt(numberString.substring(i) + numberString.substring(0, i));
+        }
+        return rotations;
+    }
+
+    // Return binary array of a base 10 integer
+    public static int [] integerToBinaryArray (int number) {
+        int [] array = new int[10000];
+        int digitCount = 0;
+
+        int j = 0;
+        while (number > 0) {
+            array[j] = number % 2;
+            number /= 2;
+            digitCount++;
+            j++;
+
+        }
+        int [] result = new int[digitCount];
+        for (int i = 0; i < digitCount; i++) {
+            result[i] = array[(digitCount - 1) - i];
+        }
+        return result;
+    }
+
+    // Truncatable prime, right and left digit removed and added into array for each step
+    public static int[] removeDigitRightAndLeft (int number) {
+        String str = String.valueOf(number);
+        int [] array = new int[(str.length() * 2) -2];
+        for (int i = 0; i < str.length() - 1; i++) {
+            array[i] = Integer.parseInt(str.substring(0,i+1));
+            array[i + str.length() - 1] = Integer.parseInt(str.substring(i+1));
         }
         return array;
     }
