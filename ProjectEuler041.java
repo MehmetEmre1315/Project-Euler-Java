@@ -1,16 +1,7 @@
 import java.util.Arrays;
 
-public class Main {
-    static boolean isPrime (long n) {
-        if (n < 2) return false;
-        if (n == 2) return true;
-        for (long i = 2L; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) return false;
-        }
-        return true;
-    }
-
-    public static void main(String[] args) {
+public class ProjectEuler041 {
+    public String run() {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int answer = 0;
 
@@ -29,7 +20,7 @@ public class Main {
                     digits[j] = Integer.parseInt(strDigits[j]);
                 }
 
-                if (Arrays.equals(digits, panDigitalNumbers) && isPrime(i)) {
+                if (Arrays.equals(digits, panDigitalNumbers) && Library.isPrime(i)) {
                     System.out.println("Answer: " + i);
                     answer = i;
                     break;
@@ -37,5 +28,10 @@ public class Main {
             }
             if (answer != 0) break;
         }
+        return Integer.toString(answer);
+    }
+
+    public static void main(String[] args) {
+        new ProjectEuler041().run();
     }
 }

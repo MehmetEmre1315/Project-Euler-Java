@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Main {
+public class ProjectEuler039 {
     static int[] hypotenuseAndPerimeter(int a, int b) {
         int hypotenuse = (int) Math.sqrt(a * a + b * b);
         int perimeter = a + b + hypotenuse;
@@ -9,7 +9,7 @@ public class Main {
         }
         return new int[]{perimeter, a, b, hypotenuse};
     }
-    public static void main(String[] args) {
+    public String run() {
         int [] perimeters = new int[1000];
         int l = 0;
         for (int i = 1; i < 1000; i++) {
@@ -42,5 +42,10 @@ public class Main {
         }
 
         System.out.println("Answer is: " + n2 + " with " + n1 + " solutions");
+
+        return Integer.toString(n2);
+    }
+    public static void main(String[] args) {
+        new ProjectEuler039().run();
     }
 }

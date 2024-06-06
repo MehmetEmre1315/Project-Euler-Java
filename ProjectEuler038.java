@@ -3,8 +3,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
+public class ProjectEuler038 {
+    public String run() {
         List<Long> pandigitalNumberList = new ArrayList<>();
         // Number
         for (int i = 0; i < 100000; i++) {
@@ -29,9 +29,9 @@ public class Main {
         pandigitalNumberList.sort(null);
         System.out.println("Answer is " + pandigitalNumberList.get(pandigitalNumberList.size() - 1));
 
-
-
-
-
+        return String.valueOf(pandigitalNumberList.get(pandigitalNumberList.size() - 1));
+    }
+    public static void main(String[] args) {
+        new ProjectEuler038().run();
     }
 }
