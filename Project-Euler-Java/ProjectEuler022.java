@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class ProjectEuler022 {
-    private static final File myObj = new File("C:\\2024_Kodlama\\Coding\\Java\\IntelliJ\\Project-Euler-Java\\ProjectEuler022Names.txt");
+    private static final File myObj = new File("C:\\2024_Kodlama\\Coding\\Java\\IntelliJ\\Project-Euler-Solutions\\Project-Euler-Java\\ProjectEuler022Names.txt");
     public String run() {
 
         String data = null;
