@@ -18,6 +18,13 @@ public class LibraryTest {
         assertEquals(12345, Library.nDigitPan(5)[0]);
     }
     @Test
+    public void testCheckPandigital() {
+        assertTrue(Library.checkPandigital("123456789", 9, false));
+        assertTrue(Library.checkPandigital("1230456789", 9, true));
+        assertTrue(Library.checkPandigital("321654", 6, false));
+        assertTrue(Library.checkPandigital("321987654", 9, false));
+    }
+    @Test
     public void testIsPalindrome () {
         assertTrue(Library.isPalindrome(9009));
     }
