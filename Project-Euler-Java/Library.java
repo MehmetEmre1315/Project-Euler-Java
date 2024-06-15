@@ -14,7 +14,7 @@ final class Library {
         return true;
     }
 
-    // Max n value is 9
+    // Max n value is 9, 0 is excluded
     // Return n digit pan digital numbers array
     // n = 9 takes too much time, don't use for 9
     public static int[] nDigitPan (int n) {
@@ -44,6 +44,38 @@ final class Library {
         System.arraycopy(array, 0, result, 0, k);
 
         return result;
+    }
+
+    // Check a String Number pandigital or not.
+    public static boolean checkPandigital (String strNumber, int base, boolean is0included) {
+        if (is0included) {
+            if (strNumber.length() != base + 1) {
+                return false;
+            }
+        } else {
+            if (strNumber.length() != base) {
+                return false;
+            }
+        }
+
+        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] panDigitalNumber;
+        if (is0included) {
+            panDigitalNumber = new int[base + 1];
+            System.arraycopy(numbers, 0, panDigitalNumber, 0, base + 1);
+        } else {
+            panDigitalNumber = new int[base];
+            System.arraycopy(numbers, 1, panDigitalNumber, 0, base);
+        }
+
+        String[] strDigits = strNumber.split("");
+        int[] digits = new int[strDigits.length];
+        for (int i = 0; i < strDigits.length; i++) {
+            digits[i] = Integer.parseInt(strDigits[i]);
+        }
+        Arrays.sort(digits);
+
+        return Arrays.equals(digits, panDigitalNumber);
     }
 
     // Check if n is palindrome
