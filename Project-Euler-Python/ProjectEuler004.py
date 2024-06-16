@@ -1,11 +1,17 @@
-a = list(range(10, 100))
-b = list(range(10, 100))
+# Check if n is palindrome
+def is_palindrome(n):
+    n = str(n)
+    reverse_n = n[::-1]
+    if n == reverse_n:
+        return True
+    return False
 
-c = 0
 
-for x in range(len(a) - 1):
-    for y in range(len(b) - 1):
-        c = a[x] * b[y]
+answer = 0
+for i in range(999, 99, -1):
+    for j in range(999, 99, -1):
+        product = i * j
+        if is_palindrome(product) and product > answer:
+            answer = product
 
-        print(c)
-print(a[len(a) - 1])
+print(answer)
